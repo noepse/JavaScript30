@@ -19,28 +19,66 @@
     }
 
     // Regular
+    console.log('Hello!')
 
     // Interpolated
+    console.log('Hello I am a %s string!', 'blah')
+    let hehehe = 'blah'
+    console.log(`Hello I am a ${hehehe} string`)
 
     // Styled
+    console.log('%c I am some great text', 'font-size: 50px; background: red')
 
     // warning!
+    console.warn('OH NOOOO')
 
     // Error :|
+    console.error('Agh!!')
 
     // Info
+    console.info('crocodiles eat 3-4 people per year')
 
     // Testing
+    console.assert(1 === 2, 'that is wrong')
+    // will only wrong if first expression is false, can be used to test statements
 
     // clearing
+    console.clear();
 
     // Viewing DOM Elements
+    const p = document.querySelector('p');
+    console.log(p);
+    console.dir(p);
 
     // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`)
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years`);
+      console.groupEnd(`${dog.name}`)
+
+    })
 
     // counting
 
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Steve');
+
     // timing
+
+    console.time('fetching data');
+    // insert function here
+    console.timeEnd('fetching data');
+
+    // table
+
+    console.table(dogs);
 
   </script>
 </body>
